@@ -405,4 +405,21 @@ footer .credit a {
   html {
     font-size: 55%;
   }
+
+  .menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu .row .menu-card {
+    flex: 0 0 50%;   /* bikin pas 2 kolom */
+    max-width: 50%;
+    box-sizing: border-box;
+    padding: 1rem;   /* kasih jarak antar card */
+  }
+
+  .menu .row .menu-card img {
+    width: 100%;  /* biar gambar ikut melebar sesuai card */
+  }
 }
