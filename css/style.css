@@ -86,6 +86,11 @@ body {
   color: var(--primary);
 }
 
+/* Sembunyikan hamburger menu secara default (untuk laptop dan layar besar) */
+.navbar-extra #hamburger-menu {
+  display: none;
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -404,6 +409,13 @@ footer .credit a {
   .contact .row form {
     padding-top: 0;
   }
+
+  /* Tambahan: Pastikan menu cards di tablet minimal 2 kolom (wrap otomatis) */
+  .menu .row .menu-card {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: calc(50% - 1rem);
+    margin: 0.5rem;
+  }
 }
 
 /* Mobile Phone */
@@ -419,13 +431,16 @@ footer .credit a {
   }
 
   .menu .row .menu-card {
-    flex: 0 0 50%; /* bikin pas 2 kolom */
+    flex: 0 0 50%;   /* bikin pas 2 kolom, seperti asli */
     max-width: 50%;
     box-sizing: border-box;
-    padding: 1rem; /* kasih jarak antar card */
+    padding: 1rem;   /* kasih jarak antar card, seperti asli */
+    margin: 0;       /* reset margin jika ada konflik */
   }
 
   .menu .row .menu-card img {
-    width: 100%; /* biar gambar ikut melebar sesuai card */
+    width: 100%;  /* biar gambar ikut melebar sesuai card, seperti asli */
+    border-radius: 50%; /* pastikan gambar tetap bulat */
+    max-width: 80%; /* opsional: gambar lebih kecil agar fit 2 kolom rapi di HP */
   }
 }

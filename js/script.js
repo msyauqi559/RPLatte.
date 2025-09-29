@@ -1,19 +1,16 @@
 // Toggle
 const navbarNav = document.querySelector('.navbar-nav');
 
-
 // ketika hamburger
 document.querySelector("#hamburger-menu").onclick = () => {
   navbarNav.classList.toggle("active");
 };
 
-
 //klik di luar sidebar untuk menghilangkan nav
 const hamburger = document.querySelector("#hamburger-menu");
 
-documenta.addEventListener("click", function (e) {
+document.addEventListener("click", function (e) {
   if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
     navbarNav.classList.remove('active');
   }
 });
-
