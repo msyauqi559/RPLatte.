@@ -77,6 +77,11 @@ body {
   margin: 0 0.5rem;
 }
 
+/* Sembunyikan hamburger menu secara default (untuk laptop dan layar besar) */
+.navbar-extra #hamburger-menu {
+  display: none;
+}
+
 .navbar .navbar-extra a:hover {
   color: var(--primary);
 }
@@ -144,13 +149,13 @@ body {
 
 /* About Section */
 .about,
-.menu, 
+.menu,
 .contact {
   padding: 8rem 7% 1.4rem;
 }
 
 .about h2,
-.menu h2, 
+.menu h2,
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
@@ -158,7 +163,7 @@ body {
 }
 
 .about h2 span,
-.menu h2 span, 
+.menu h2 span,
 .contact h2 span {
   color: var(--primary);
 }
@@ -197,7 +202,7 @@ body {
   margin-bottom: 1rem;
 }
 
-.menu p, 
+.menu p,
 .contact p {
   text-align: center;
   max-width: 30rem;
@@ -239,7 +244,6 @@ body {
   width: 100%;
   object-fit: cover;
 }
-
 
 .contact .row form {
   flex: 1 1 45rem;
@@ -315,7 +319,7 @@ footer .credit a {
 }
 
 .icon {
-  color:#c58b5e;
+  color: #c58b5e;
 }
 
 /* Media Queries */
@@ -333,9 +337,11 @@ footer .credit a {
     font-size: 62.5%;
   }
 
-  #humburger-menu {
+  /* Tampilkan hamburger menu di tablet dan bawahnya */
+  .navbar-extra #hamburger-menu {
     display: inline-block;
   }
+
   .navbar .navbar-nav {
     position: absolute;
     top: 100%;
@@ -413,13 +419,13 @@ footer .credit a {
   }
 
   .menu .row .menu-card {
-    flex: 0 0 50%;   /* bikin pas 2 kolom */
+    flex: 0 0 50%; /* bikin pas 2 kolom */
     max-width: 50%;
     box-sizing: border-box;
-    padding: 1rem;   /* kasih jarak antar card */
+    padding: 1rem; /* kasih jarak antar card */
   }
 
   .menu .row .menu-card img {
-    width: 100%;  /* biar gambar ikut melebar sesuai card */
+    width: 100%; /* biar gambar ikut melebar sesuai card */
   }
 }
