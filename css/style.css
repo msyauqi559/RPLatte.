@@ -225,16 +225,19 @@ body {
 
 .menu .row .menu-card {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
+/* Bagian yang diubah: ukuran gambar menu-card */
 .menu .row .menu-card img {
-  border-radius: 50%;
-  width: 50%;
+  border-radius: 25%;
+  width: 80%;          /* ukuran gambar di desktop */
+  max-width: 250px;    /* maksimal lebar gambar di desktop */
+
 }
 
 .menu .row .menu-card .menu-card-title {
-  margin: 1rem auto 0.5rem;
+  margin: 1rem auto 1rem;
 }
 
 /* Contact Section */
@@ -330,9 +333,18 @@ footer .credit a {
 /* Media Queries */
 
 /* Laptop */
-@media (max-width: 1366px) {
-  html {
-    font-size: 75%;
+@media (min-width: 769px) and (max-width: 1366px) {
+  .menu .row .menu-card {
+    flex: 0 0 30%;          /* Lebar sekitar 30% per card, jadi 3 kolom */
+    max-width: 30%;
+    margin: 1rem 1.5rem;    /* Jarak antar card lebih luas */
+    padding-bottom: 3rem;
+  }
+
+  .menu .row .menu-card img {
+    width: 60%;             /* Gambar lebih besar */
+    max-width: 300px;       /* Maksimal lebar gambar */
+    border-radius: 25%;
   }
 }
 
@@ -410,11 +422,18 @@ footer .credit a {
     padding-top: 0;
   }
 
-  /* Tambahan: Pastikan menu cards di tablet minimal 2 kolom (wrap otomatis) */
+  /* Pastikan menu cards di tablet minimal 2 kolom */
   .menu .row .menu-card {
     flex: 0 0 calc(50% - 1rem);
     max-width: calc(50% - 1rem);
     margin: 0.5rem;
+  }
+
+  /* Ukuran gambar tetap sama seperti desktop */
+  .menu .row .menu-card img {
+    width: 80%;
+    max-width: 250px;
+    border-radius: 25%;
   }
 }
 
@@ -431,16 +450,16 @@ footer .credit a {
   }
 
   .menu .row .menu-card {
-    flex: 0 0 50%;   /* bikin pas 2 kolom, seperti asli */
+    flex: 0 0 50%;   /* tetap 2 kolom */
     max-width: 50%;
     box-sizing: border-box;
-    padding: 1rem;   /* kasih jarak antar card, seperti asli */
-    margin: 0;       /* reset margin jika ada konflik */
+    padding: 1rem;   /* jarak antar card */
+    margin: 0;
   }
 
   .menu .row .menu-card img {
-    width: 100%;  /* biar gambar ikut melebar sesuai card, seperti asli */
-    border-radius: 50%; /* pastikan gambar tetap bulat */
-    max-width: 80%; /* opsional: gambar lebih kecil agar fit 2 kolom rapi di HP */
+    width: 80%;         /* dari 85% jadi 75% */
+    max-width: 180px;   /* dari 350px jadi 180px */
+    border-radius: 25%;
   }
 }
