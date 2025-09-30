@@ -86,11 +86,6 @@ body {
   color: var(--primary);
 }
 
-/* Sembunyikan hamburger menu secara default (untuk laptop dan layar besar) */
-.navbar-extra #hamburger-menu {
-  display: none;
-} 
-
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -100,6 +95,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .hero::after {
@@ -231,9 +227,8 @@ body {
 /* Bagian yang diubah: ukuran gambar menu-card */
 .menu .row .menu-card img {
   border-radius: 25%;
-  width: 80%;          /* ukuran gambar di desktop */
-  max-width: 250px;    /* maksimal lebar gambar di desktop */
-
+  width: 80%; /* ukuran gambar di desktop */
+  max-width: 250px; /* maksimal lebar gambar di desktop */
 }
 
 .menu .row .menu-card .menu-card-title {
@@ -335,15 +330,15 @@ footer .credit a {
 /* Laptop */
 @media (min-width: 769px) and (max-width: 1366px) {
   .menu .row .menu-card {
-    flex: 0 0 30%;          /* Lebar sekitar 30% per card, jadi 3 kolom */
+    flex: 0 0 30%; /* Lebar sekitar 30% per card, jadi 3 kolom */
     max-width: 30%;
-    margin: 1rem 1.5rem;    /* Jarak antar card lebih luas */
+    margin: 1rem 1.5rem; /* Jarak antar card lebih luas */
     padding-bottom: 3rem;
   }
 
   .menu .row .menu-card img {
-    width: 60%;             /* Gambar lebih besar */
-    max-width: 300px;       /* Maksimal lebar gambar */
+    width: 60%; /* Gambar lebih besar */
+    max-width: 300px; /* Maksimal lebar gambar */
     border-radius: 25%;
   }
 }
@@ -452,19 +447,18 @@ footer .credit a {
       rgba(0, 0, 0, 0.5)
     );
     z-index: 1;
+    pointer-events: none;
   }
 
-  /* Pastikan .hero .content berada di atas overlay */
   .hero .content {
     position: relative;
     z-index: 2;
     padding: 2rem 7%;
     max-width: 90vw;
-    background-color: rgba(0, 0, 0, 0.3); /* semi transparan agar teks lebih terbaca */
+    background-color: rgba(0, 0, 0, 0.3); /* semi transparan agar teks terbaca */
     border-radius: 1rem;
   }
 
-  /* Sesuaikan ukuran font */
   .hero .content h1 {
     font-size: 2.8rem;
     line-height: 1.3;
