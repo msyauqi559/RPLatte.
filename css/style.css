@@ -89,7 +89,7 @@ body {
 /* Sembunyikan hamburger menu secara default (untuk laptop dan layar besar) */
 .navbar-extra #hamburger-menu {
   display: none;
-}
+} 
 
 /* Hero Section */
 .hero {
